@@ -26,8 +26,14 @@ h1, h2, h3, h4, h5, p, span{
 
   /* W3C Markup, IE10 Release Preview */ 
   background-image: linear-gradient(to bottom right, #005C91 0%, #02BD97 100%);
+}
+.with_pic {
   background: url('lib/img/bg.jpg');
   background-size: cover;
+}
+.show_bg_pic {
+  margin: 1em;
+  float: right;
 }
 .row > div {
   padding: 5em 2em;
