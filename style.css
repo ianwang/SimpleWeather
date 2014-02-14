@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, p, span{
   background-image: linear-gradient(to bottom right, #005C91 0%, #02BD97 100%);
 }
 .with_pic {
-  background: url('lib/img/bg.jpg');
+  background: url('lib/img/bg.gif');
   background-size: cover;
 }
 .show_bg_pic {
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, p, span{
 .forecast tr:nth-child(odd),
 .forecast td {
   background: rgba(0, 0, 0, 0.34);
-  font-size: 0.5rem;
+  font-size: 12px;
   color: #fafafa;
 }
 
