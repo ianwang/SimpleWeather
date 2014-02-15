@@ -7,10 +7,10 @@ factory('OpenWeatherMap', function(
     $http
 ){
 
-    function now () {
+    function now (city) {
         var _apiUrl = 'http://api.openweathermap.org/data/2.5/weather';
         var _params = {
-            q: 'Taipei',
+            q: city,
             lang: 'zh_tw'
         };
 

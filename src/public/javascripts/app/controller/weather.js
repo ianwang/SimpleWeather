@@ -14,12 +14,17 @@ controller('WeatherCtrl', function(
         $scope.city = data.city;
         $scope.loc  = data.loc;
 
-        console.log('location', data);
-
+        updateWeather($scope.city);
     });
 
-    OpenWeatherMap.now().success(function success (data) {
-        console.log('OpenWeatherMap', data);
-    });
+    function updateWeather (city) {
+        OpenWeatherMap.now( city ).success(function success (data) {
+            $scope.tempNow = kToC(data.main.temp) ;
+        });
+    }
+
+    function kToC(val) {
+        return val - 273.15 ;
+    }
 
 });
