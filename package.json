@@ -1,0 +1,19 @@
+{
+  "name": "SimpleWeather",
+  "version": "0.0.0",
+  "description": "SimpleWeather =============",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dca/SimpleWeather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dca/SimpleWeather/issues"
+  },
+  "homepage": "https://github.com/dca/SimpleWeather"
+}
