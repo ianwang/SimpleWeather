@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="SimpleWeather">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="lib/css/foundation.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body ng-controller="WeatherCtrl">
     <div class='bg'></div>
     <div class="row">
       <div class='columns large-5 small-12'>
@@ -145,6 +145,11 @@
 
 
     <script src="lib/js/jquery.js"></script>
-    <script src="public/javascripts/app.js"></script>
+    <script src="components/angular/angular.min.js"></script>
+
+
+    <script src="public/javascripts/app/main.js"></script>
+    <script src="public/javascripts/app/controller/weather.js"></script>
+    <script src="public/javascripts/app/model/location.js"></script>
   </body>
 </html>
