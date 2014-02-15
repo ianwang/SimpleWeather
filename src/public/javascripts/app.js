@@ -1,6 +1,17 @@
+var temp_now = window.tempNow;
+
 $('.show_bg_pic').click(function(){
   $('.bg').addClass('with_pic');
 });
+
+/*
+$({ value: 0 }).animate({ value: temp_now }, {
+  duration: 900,
+  easing: 'swing',
+  step: function() {
+  }
+});
+*/
 
 var mapContainer = $( "#mapContainer" );
  
@@ -87,6 +98,18 @@ if (navigator.geolocation) {
     console.log( "Initial Position Found" );
     console.log(position.coords.latitude, position.coords.longitude);
     moveToLocation(position.coords.latitude, position.coords.longitude );
+
+    $.getJSON('http://ws.geonames.org/countryCode', {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude,
+      type: 'JSON'
+    }, function(result) {
+
+      var msg = 'Country: ' + result.countryName + '\n' + 'Code: ' + result.countryCode;
+      $('.show_location').text(msg);
+      console.log('dddd',result);
+
+    });
      
     // Add a marker to the map using the position.
     locationMarker = addMarker(
