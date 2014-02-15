@@ -71,11 +71,7 @@ h1, h2, h3, h4, h5, p, span{
 .forecast tr:nth-child(odd),
 .forecast td {
   background: rgba(0, 0, 0, 0.34);
-<<<<<<< HEAD
-  font-size: 0.5rem;
-=======
   font-size: 12px;
->>>>>>> gh-pages
   color: #fafafa;
 }
 
@@ -149,4 +145,12 @@ footer {
 footer p {
   margin: 6px;
   font-size: 0.8rem;
+}
+
+#mapContainer {
+  width: 100% ;
+  margin-bottom: 2em;
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
 }
