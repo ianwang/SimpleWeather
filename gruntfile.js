@@ -9,16 +9,18 @@ module.exports = function (grunt) {
         },
         copy: {
             main: {
-                src: 'src/**/*',
+                expand: true,
+                cwd: 'src/',
+                src: '**',
                 dest: 'build/',
+                filter: 'isFile',
             },
         },
     });
 
     grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('publish', ['copy', 'gh-pages']);
-
-    grunt.registerTask('copy', ['copy']);
 
 };
