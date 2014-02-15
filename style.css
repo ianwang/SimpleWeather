@@ -146,3 +146,11 @@ footer p {
   margin: 6px;
   font-size: 0.8rem;
 }
+
+#mapContainer {
+  width: 100% ;
+  margin-bottom: 2em;
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+}
