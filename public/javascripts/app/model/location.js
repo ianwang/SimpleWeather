@@ -7,5 +7,12 @@ factory('location', function(
     $http
 ){
 
-    return {};
+    function get () {
+        return $http.get('http://ipinfo.io/json');
+    }
+
+    return {
+        get: get
+    };
+
 });
