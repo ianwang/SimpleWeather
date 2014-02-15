@@ -99,18 +99,6 @@ if (navigator.geolocation) {
     console.log(position.coords.latitude, position.coords.longitude);
     moveToLocation(position.coords.latitude, position.coords.longitude );
 
-    $.getJSON('http://ws.geonames.org/countryCode', {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude,
-      type: 'JSON'
-    }, function(result) {
-
-      var msg = 'Country: ' + result.countryName + '\n' + 'Code: ' + result.countryCode;
-      $('.show_location').text(msg);
-      console.log('dddd',result);
-
-    });
-     
     // Add a marker to the map using the position.
     locationMarker = addMarker(
       position.coords.latitude,
