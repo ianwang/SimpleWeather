@@ -26,8 +26,14 @@ h1, h2, h3, h4, h5, p, span{
 
   /* W3C Markup, IE10 Release Preview */ 
   background-image: linear-gradient(to bottom right, #005C91 0%, #02BD97 100%);
-  background: url('lib/img/bg.jpg');
+}
+.with_pic {
+  background: url('lib/img/bg.gif');
   background-size: cover;
+}
+.show_bg_pic {
+  margin: 1em;
+  float: right;
 }
 .row > div {
   padding: 5em 2em;
@@ -65,7 +71,11 @@ h1, h2, h3, h4, h5, p, span{
 .forecast tr:nth-child(odd),
 .forecast td {
   background: rgba(0, 0, 0, 0.34);
+<<<<<<< HEAD
   font-size: 0.5rem;
+=======
+  font-size: 12px;
+>>>>>>> gh-pages
   color: #fafafa;
 }
 
@@ -130,4 +140,13 @@ h1, h2, h3, h4, h5, p, span{
   text-align:left;
   padding:10px 6px;
   border-bottom: 1px solid #474747;
+}
+
+footer {
+ text-align: center; 
+ padding-bottom: 4em;
+}
+footer p {
+  margin: 6px;
+  font-size: 0.8rem;
 }
