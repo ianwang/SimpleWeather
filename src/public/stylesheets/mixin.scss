@@ -1,0 +1,19 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin linear-gradient($direction, $color-start, $color-end) {
+    background-image: -webkit-linear-gradient($direction, $color-start, $color-end);
+    background-image:    -moz-linear-gradient($direction, $color-start, $color-end);
+    background-image:     -ms-linear-gradient($direction, $color-start, $color-end);
+    background-image:      -o-linear-gradient($direction, $color-start, $color-end);
+    background-image:         linear-gradient($direction, $color-start, $color-end);
+
+    // background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #005c91), color-stop(1, #02bd97));
+
+}
+
