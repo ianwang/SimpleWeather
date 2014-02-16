@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/* line 1, ../sass/reset.sass */
+body {
+  margin: 0;
+}
+
+/* line 15, ../sass/main/style.sass */
+h1, h2, h3, h4, h5, p, span {
+  color: white;
+  text-shadow: -1px 1px 2px #555555;
+}
+
+/* line 19, ../sass/main/style.sass */
+.bg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: -ms-linear-gradient(top left, #005c91 0%, #02bd97 100%);
+  background-image: -moz-linear-gradient(top left, #005c91 0%, #02bd97 100%);
+  background-image: -o-linear-gradient(top left, #005c91 0%, #02bd97 100%);
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #005c91), color-stop(1, #02bd97));
+  background-image: -webkit-linear-gradient(top left, #005c91 0%, #02bd97 100%);
+  background-image: linear-gradient(to bottom right, #005c91 0%, #02bd97 100%);
+}
+
+/* line 31, ../sass/main/style.sass */
+.with_pic {
+  background: url("public/images/bg.gif");
+  background-size: cover;
+}
+
+/* line 35, ../sass/main/style.sass */
+.show_bg_pic {
+  margin: 1em;
+  float: right;
+}
+
+/* line 40, ../sass/main/style.sass */
+.row > div {
+  padding: 5em 2em;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "Microsoft Jhenghei", sans-serif;
+}
+/* line 43, ../sass/main/style.sass */
+.row .columns > div {
+  margin-bottom: 2em;
+}
+
+/* line 48, ../sass/main/style.sass */
+.weather_main .temp {
+  float: left;
+  line-height: 1;
+  font-size: 5em;
+}
+/* line 52, ../sass/main/style.sass */
+.weather_main .in_short {
+  float: right;
+}
+/* line 54, ../sass/main/style.sass */
+.weather_main .in_short img {
+  height: 25px;
+  float: left;
+  margin: 6px;
+}
+
+/* line 59, ../sass/main/style.sass */
+.in_short > div {
+  float: left;
+}
+
+/* line 62, ../sass/main/style.sass */
+.forecast {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+/* line 79, ../sass/main/style.sass */
+.forecast table {
+  background: rgba(0, 0, 0, 0.34);
+  font-size: 12px;
+  color: #fafafa;
+}
+/* line 84, ../sass/main/style.sass */
+.forecast tr:nth-child(even), .forecast tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.34);
+  font-size: 12px;
+  color: #fafafa;
+}
+/* line 88, ../sass/main/style.sass */
+.forecast td {
+  background: rgba(0, 0, 0, 0.34);
+  font-size: 12px;
+  color: #fafafa;
+  text-align: left;
+  padding: 10px 6px;
+  border-bottom: 1px solid #474747;
+}
+/* line 96, ../sass/main/style.sass */
+.forecast table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 104, ../sass/main/style.sass */
+.forecast tr:last-child td:last-child {
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+/* line 109, ../sass/main/style.sass */
+.forecast table tr:first-child td:first-child {
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+/* line 113, ../sass/main/style.sass */
+.forecast table tr:first-child td:last-child {
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+/* line 117, ../sass/main/style.sass */
+.forecast tr:last-child td:first-child {
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* line 122, ../sass/main/style.sass */
+footer {
+  text-align: center;
+  padding-bottom: 4em;
+}
+/* line 125, ../sass/main/style.sass */
+footer p {
+  margin: 6px;
+  font-size: 0.8rem;
+}
+
+/* line 129, ../sass/main/style.sass */
+#mapContainer {
+  width: 100%;
+  margin-bottom: 2em;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  opacity: 0.9;
+}
