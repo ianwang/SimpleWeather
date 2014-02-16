@@ -1,0 +1,82 @@
+.row
+    .columns.large-5.small-12
+        .button.radius.tiny.success.show_bg_pic
+          | 顯示背景圖片
+        .region
+          h1 {{ city }}
+          p Taipei, Taiwan
+        .weather_main.clearfix
+          p.temp.small-7
+            | {{ tempNow | number:0 }}°C
+          .in_short.small-5
+            img(src='lib/img/size.png')
+            div
+              h4 陰有雨
+              p 12°C - 13°C
+        .summary
+          h5 受到強烈大陸冷氣團影響，氣溫偏低，有短暫陣雨。
+          p
+            | 受強烈大陸冷氣團影響，北部及東部地區濕濕冷冷的感覺會持續到周六，這幾天持續濕冷，大家家裡相信都是非常潮濕，要小心可能會有家具或衣服發霉的情況，必要的時候可以打開除濕機除溼一下喲。
+      .columns.large-7.small-12
+        .forecast.two_day
+          h4 今明預報
+          table(border='0')
+            tr
+              td(style='width: 17%;') 台北市
+              td(style='width: 23%;')
+              td(style='width: 15%;') 溫度(C)
+              td(style='width: 15%;') 天氣狀況
+              td(style='width: 15%;') 舒適度
+              td(style='width: 15%;') 降雨機率
+            tr
+              td 今晚至明晨
+              td 00:00 - 06:00
+              td 11 - 12
+              td 圖
+              td 寒冷
+              td 70%
+            tr
+              td 今晚至明晨
+              td 00:00 - 06:00
+              td 11 - 12
+              td 圖
+              td 寒冷
+              td 70%
+            tr
+              td 今晚至明晨
+              td 00:00 - 06:00
+              td 11 - 12
+              td 圖
+              td 寒冷
+              td 70%
+        .forecast.one_week
+          h4 一週預報
+          table(border='0')
+            tr
+              td(style='width: 17%;') 台北市
+              td(style='width: 23%;')
+              td(style='width: 15%;') 溫度(C)
+              td(style='width: 15%;') 天氣狀況
+              td(style='width: 15%;') 舒適度
+              td(style='width: 15%;') 降雨機率
+            tr
+              td 今晚至明晨
+              td 00:00 - 06:00
+              td 11 - 12
+              td 圖
+              td 寒冷
+              td 70%
+            tr
+              td 今晚至明晨
+              td 00:00 - 06:00
+              td 11 - 12
+              td 圖
+              td 寒冷
+              td 70%
+            tr
+              td 今晚至明晨
+              td 00:00 - 06:00
+              td 11 - 12
+              td 圖
+              td 寒冷
+              td 70%
