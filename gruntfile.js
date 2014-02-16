@@ -26,10 +26,25 @@ module.exports = function (grunt) {
                 }
             }
         },
+        compass:{
+            dev: {
+                options: {
+                    sassDir: 'src/public/stylesheets/sass/main',
+                    cssDir: 'src/public/stylesheets/css'
+                }
+            }
+        },
         watch: {
             jade: {
                 files: ['src/views/**/*.jade'],
                 tasks: ['jade'],
+                options: {
+                    //
+                }
+            },
+            compass: {
+                files: ['src/public/stylesheets/sass//**/*.sass'],
+                tasks: ['compass'],
                 options: {
                     //
                 }
@@ -41,6 +56,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-compass');
 
     grunt.registerTask('publish', ['copy', 'gh-pages']);
 
