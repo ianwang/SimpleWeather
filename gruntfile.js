@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                     pretty: true
                 },
                 files: {
-                    'src/index2.html': 'src/views/index.jade'
+                    'src/index.html': 'src/views/index.jade'
                 }
             }
         },
