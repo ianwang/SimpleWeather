@@ -21,6 +21,16 @@ controller('WeatherCtrl', function(
         OpenWeatherMap.now( city ).success(function success (data) {
             $scope.tempNow = kToC(data.main.temp) ;
         });
+
+        OpenWeatherMap.forecast().success(function success (data) {
+            //
+            console.log('forecast', data);
+        });
+
+        OpenWeatherMap.next7d().success(function success (data) {
+            //
+            console.log('next7d', data);
+        });
     }
 
     function kToC(val) {

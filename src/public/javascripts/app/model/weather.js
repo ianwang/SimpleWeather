@@ -7,6 +7,18 @@ factory('OpenWeatherMap', function(
     $http
 ){
 
+    var localtion = {
+        city: 'Taipei',
+        lat: undefined,
+        lon: undefined,
+    };
+
+    var _params = {
+        lang: 'zh_tw',
+        q: localtion.city
+    };
+
+
     function now (city) {
         var _apiUrl = 'http://api.openweathermap.org/data/2.5/weather';
         var _params = {
@@ -17,8 +29,22 @@ factory('OpenWeatherMap', function(
         return $http.get( _apiUrl, { 'params': _params });
     }
 
+    function forecast() {
+        var _apiUrl = 'http://api.openweathermap.org/data/2.5/forecast';
+
+        return $http.get( _apiUrl, { 'params': _params });
+    }
+
+    function next7d() {
+        var _apiUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily';
+
+        return $http.get( _apiUrl, { 'params': _params });
+    }
+
     return {
-        now: now
+        now: now,
+        forecast: forecast,
+        next7d: next7d
     };
 
 });
