@@ -77,6 +77,13 @@ module.exports = function (grunt) {
                 options: {
                     //
                 }
+            },
+            js: {
+                files: ['src/public/javascripts/**/*.js'],
+                tasks: ['uglify'],
+                options: {
+                    //
+                }
             }
         }
     });
