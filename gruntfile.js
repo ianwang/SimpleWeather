@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                     compass: true
                 },
                 files: {
-                    'build/public/stylesheets/style.css': 'src/public/stylesheets/sass/main/style.sass'
+                    'build/public/stylesheets/style.css': 'src/public/stylesheets/style.sass'
                 }
             }
         },
@@ -71,9 +71,9 @@ module.exports = function (grunt) {
                     //
                 }
             },
-            compass: {
-                files: ['src/public/stylesheets/sass/**/*.sass'],
-                tasks: ['compass'],
+            sass: {
+                files: ['src/public/stylesheets/**/*.sass', 'src/public/stylesheets/**/*.scss'],
+                tasks: ['sass'],
                 options: {
                     //
                 }
