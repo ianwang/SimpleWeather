@@ -25,6 +25,15 @@ module.exports = function (grunt) {
                     'src/index2.html': 'src/views/index.jade'
                 }
             }
+        },
+        watch: {
+            jade: {
+                files: ['src/views/**/*.jade'],
+                tasks: ['jade'],
+                options: {
+                    //
+                }
+            }
         }
     });
 
