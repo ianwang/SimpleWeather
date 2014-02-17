@@ -74,6 +74,9 @@ module.exports = function (grunt) {
                     //
                 }
             },
+            html:{
+                files: ['build/**/*.html']
+            },
             sass: {
                 files: ['src/public/stylesheets/**/*.sass', 'src/public/stylesheets/**/*.scss'],
                 tasks: ['sass'],
