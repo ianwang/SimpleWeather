@@ -10,6 +10,8 @@ controller('WeatherCtrl', function(
     //
     console.log('ng run');
 
+    $scope.now = {};
+
     location.get().success(function success (data) {
         $scope.city = data.city;
         $scope.loc  = data.loc;
@@ -19,7 +21,10 @@ controller('WeatherCtrl', function(
 
     function updateWeather (city) {
         OpenWeatherMap.now( city ).success(function success (data) {
-            $scope.tempNow = data.main.temp;
+            $scope.now.temp = data.main.temp;
+            $scope.now.tempMax = data.main.temp_max;
+            $scope.now.tempMin = data.main.temp_min;
+
             console.log('now', data);
         });
 
