@@ -1,0 +1,133 @@
+// ref
+// http://www.slideshare.net/sfismy/sass-31257014
+// page 41
+
+@import "compass"
+@import "../../components/foundation/scss/foundation.scss"
+
+// --------------------
+// mixin
+// --------------------
+@import "mixin"
+
+// --------------------
+// reset
+// --------------------
+@import "reset"
+
+// --------------------
+// extend
+// --------------------
+// @import "extend"
+
+// --------------------
+// layout
+// --------------------
+@import "layout"
+
+// --------------------
+// index
+// --------------------
+@import "index"
+
+// --------------------
+// Others
+// --------------------
+// @import "page"
+// @import "widght_xxxxx"
+
+
+.box
+    @include border-radius(10px)
+
+h1, h2, h3, h4, h5, p, span
+    color: #fff
+    text-shadow: -1px 1px 2px #555555
+
+
+.row
+    > div
+        padding: 5em 2em
+        font-family: 'Helvetica Neue', Helvetica, Arial, "微軟正黑體", "Microsoft Jhenghei", sans-serif
+    .columns > div
+        margin-bottom: 2em
+
+
+.weather_main
+    .temp
+        float: left
+        line-height: 1
+        font-size: 5em
+    .in_short
+        float: right
+        img
+            height: 25px
+            float: left
+            margin: 6px
+
+.in_short > div
+    float: left
+
+.forecast
+    margin: 0px
+    padding: 0px
+    width: 100%
+    @include border-radius(6px 6px 6px 6px, 6px 6px 6px 6px )
+
+    table
+        background: rgba(0, 0, 0, 0.34)
+        font-size: 12px
+        color: #fafafa
+    tr
+        &:nth-child(even), &:nth-child(odd)
+            background: rgba(0, 0, 0, 0.34)
+            font-size: 12px
+            color: #fafafa
+    td
+        background: rgba(0, 0, 0, 0.34)
+        font-size: 12px
+        color: #fafafa
+        text-align: left
+        padding: 10px 6px
+        border-bottom: 1px solid #474747
+
+    table
+        border-collapse: collapse
+        border-spacing: 0
+        border: 0px
+        width: 100%
+        height: 100%
+        margin: 0px
+        padding: 0px
+    tr:last-child td:last-child
+        -moz-border-radius-bottomright: 6px
+        -webkit-border-bottom-right-radius: 6px
+        border-bottom-right-radius: 6px
+    table tr:first-child td
+        &:first-child
+            -moz-border-radius-topleft: 6px
+            -webkit-border-top-left-radius: 6px
+            border-top-left-radius: 6px
+        &:last-child
+            -moz-border-radius-topright: 6px
+            -webkit-border-top-right-radius: 6px
+            border-top-right-radius: 6px
+    tr:last-child td:first-child
+        -moz-border-radius-bottomleft: 6px
+        -webkit-border-bottom-left-radius: 6px
+        border-bottom-left-radius: 6px
+
+footer
+    text-align: center
+    padding-bottom: 4em
+    p
+        margin: 6px
+        font-size: 0.8rem
+
+#mapContainer
+    width: 100%
+    margin-bottom: 2em
+    color: #fff
+    font-size: 35px
+    text-align: center
+    opacity: 0.9

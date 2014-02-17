@@ -6,14 +6,14 @@ html(class="no-js", lang="en", ng-app="SimpleWeather")
 
         title="Weather"
 
-        link(rel="stylesheet", type="text/css", href="lib/css/normalize.css")
-        link(rel="stylesheet", type="text/css", href="lib/css/foundation.css")
-        link(rel="stylesheet", type="text/css", href="style.css")
+        link(rel="stylesheet", type="text/css", href="components/foundation/css/normalize.css")
+        //- link(rel="stylesheet", type="text/css", href="components/foundation/css/foundation.min.css")
+        link(rel="stylesheet", type="text/css", href="public/stylesheets/style.css")
 
         block styles
+        block scripts
 
     body(ng-controller="WeatherCtrl")
+        #main-wrapper
+            block content
 
-        block content
-
-        block scripts
