@@ -7,12 +7,13 @@
           p Taipei, Taiwan
         .weather_main.clearfix
           p.temp.small-7
-            | {{ tempNow | number:0 }}°C
+            | {{ now.temp | number:0 }}°C
           .in_short.small-5
-            img(src='public/images/size.png')
+            //- img(src='public/images/size.png')
+            img(src="http://openweathermap.org/img/w/{{now.icon|| '01d' }}.png")
             div
-              h4 陰有雨
-              p 12°C - 13°C
+              h4 {{ now.description }}
+              p {{ now.tempMin | number:0 }}°C - {{ now.tempMax | number:0 }}°C
         .summary
           h5 受到強烈大陸冷氣團影響，氣溫偏低，有短暫陣雨。
           p
@@ -28,27 +29,16 @@
               td(style='width: 15%;') 天氣狀況
               td(style='width: 15%;') 舒適度
               td(style='width: 15%;') 降雨機率
-            tr
-              td 今晚至明晨
-              td 00:00 - 06:00
-              td 11 - 12
-              td 圖
-              td 寒冷
-              td 70%
-            tr
-              td 今晚至明晨
-              td 00:00 - 06:00
-              td 11 - 12
-              td 圖
-              td 寒冷
-              td 70%
-            tr
-              td 今晚至明晨
-              td 00:00 - 06:00
-              td 11 - 12
-              td 圖
-              td 寒冷
-              td 70%
+
+            tr(ng-repeat="weather in forecast")
+              td {{ weather.time | date : 'MM/dd' }}
+              td {{ weather.time | date : 'HH:mm' }}
+              td {{ weather.tempMin | number:0 }} - {{ weather.tempMax | number:0 }}
+              td
+                  img(src="http://openweathermap.org/img/w/{{ weather.icon|| '01d' }}.png")
+              td {{ weather.description }}
+              td --%
+
         .forecast.one_week
           h4 一週預報
           table(border='0')
