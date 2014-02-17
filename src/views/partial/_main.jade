@@ -35,7 +35,7 @@
               td {{ weather.time | date : 'HH:mm' }}
               td {{ weather.tempMin | number:0 }} - {{ weather.tempMax | number:0 }}
               td
-                  img(src="http://openweathermap.org/img/w/{{ weather.icon|| '01d' }}.png")
+                  img.forecast-icon(src="http://openweathermap.org/img/w/{{ weather.icon|| '01d' }}.png")
               td {{ weather.description }}
               td --%
 
