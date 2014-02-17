@@ -62,36 +62,13 @@
             <h4>一週預報</h4>
             <table border="0">
               <tr>
-                <td style="width: 17%;">台北市</td>
-                <td style="width: 23%;"></td>
-                <td style="width: 15%;">溫度(C)</td>
-                <td style="width: 15%;">天氣狀況</td>
-                <td style="width: 15%;">舒適度</td>
-                <td style="width: 15%;">降雨機率</td>
+                <td style="width: 14%;" ng-repeat="wea in next7d2">{{ wea.date | date : 'MM/dd' }}</td>
               </tr>
               <tr>
-                <td>今晚至明晨</td>
-                <td>00:00 - 06:00</td>
-                <td>11 - 12</td>
-                <td>圖</td>
-                <td>寒冷</td>
-                <td>70%</td>
+                <td style="width: 14%;" ng-repeat="wea in next7d2">{{ wea.tempMin | number:0 }} ~ {{ wea.tempMax | number:0 }}</td>
               </tr>
               <tr>
-                <td>今晚至明晨</td>
-                <td>00:00 - 06:00</td>
-                <td>11 - 12</td>
-                <td>圖</td>
-                <td>寒冷</td>
-                <td>70%</td>
-              </tr>
-              <tr>
-                <td>今晚至明晨</td>
-                <td>00:00 - 06:00</td>
-                <td>11 - 12</td>
-                <td>圖</td>
-                <td>寒冷</td>
-                <td>70%</td>
+                <td style="width: 14%;" ng-repeat="wea in next7d2"><img src="http://openweathermap.org/img/w/{{ wea.icon|| '01d' }}.png" class="forecast-icon"></td>
               </tr>
             </table>
           </div>
