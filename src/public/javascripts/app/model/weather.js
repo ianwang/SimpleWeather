@@ -15,6 +15,7 @@ factory('OpenWeatherMap', function(
 
     var _params = {
         lang: 'zh_tw',
+        units: 'metric',
         q: localtion.city
     };
 
@@ -22,6 +23,7 @@ factory('OpenWeatherMap', function(
     function now (city) {
         var _apiUrl = 'http://api.openweathermap.org/data/2.5/weather';
         var _params = {
+            units: 'metric',
             q: city,
             lang: 'zh_tw'
         };
