@@ -24,6 +24,7 @@ controller('WeatherCtrl', function(
             $scope.now.temp = data.main.temp;
             $scope.now.tempMax = data.main.temp_max;
             $scope.now.tempMin = data.main.temp_min;
+            $scope.now.description = data.weather[0].description;
 
             console.log('now', data);
         });
