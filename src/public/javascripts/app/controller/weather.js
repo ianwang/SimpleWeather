@@ -19,7 +19,8 @@ controller('WeatherCtrl', function(
 
     function updateWeather (city) {
         OpenWeatherMap.now( city ).success(function success (data) {
-            $scope.tempNow = kToC(data.main.temp) ;
+            $scope.tempNow = data.main.temp;
+            console.log('now', data);
         });
 
         OpenWeatherMap.forecast().success(function success (data) {
@@ -33,8 +34,5 @@ controller('WeatherCtrl', function(
         });
     }
 
-    function kToC(val) {
-        return val - 273.15 ;
-    }
 
 });
