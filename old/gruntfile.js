@@ -106,6 +106,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['build', 'watch']);
 
-    grunt.registerTask('build', ['uglify', 'copy', 'jade', 'sass']);
+    grunt.registerTask('build', ['uglify', 'jade', 'sass']);
 
 };
