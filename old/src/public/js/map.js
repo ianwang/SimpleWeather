@@ -122,8 +122,6 @@ if (navigator.geolocation) {
   // will be called automatically each time the position of the device changes
   var positionTimer = navigator.geolocation.watchPosition(function( position ){
      
-    console.log( "Newer Position Found"); 
-     
     updateMarker(
       locationMarker,
       position.coords.latitude,
