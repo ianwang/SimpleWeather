@@ -4,13 +4,16 @@
   "description": "",
   "main": "js/app.js",
   "scripts": {
-    "start": "watchify -o js/bundle.js -v -d .",
-    "build": "browserify . | uglifyjs -cm > js/bundle.min.js"
+    "start": "watchify -o js/bundle.js -v -d ."
   },
   "author": "Ian Wang <gogoenwon@gmail.com> (https://github.com/IanWang)",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^9.0.3",
+    "del": "^1.1.1",
+    "gulp-gh-pages": "^0.5.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-uglify": "^1.1.0",
     "reactify": "^1.1.0",
     "watchify": "^2.4.0"
   },
