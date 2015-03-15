@@ -2,15 +2,19 @@
   "name": "weather",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "js/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "watchify -o js/bundle.js -v -d .",
+    "build": "browserify . | uglifyjs -cm > js/bundle.min.js"
   },
   "author": "Ian Wang <gogoenwon@gmail.com> (https://github.com/IanWang)",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-livereload": "^3.8.0",
-    "gulp-react": "^3.0.0"
+    "browserify": "^9.0.3",
+    "reactify": "^1.1.0",
+    "watchify": "^2.4.0"
+  },
+  "dependencies": {
+    "react": "^0.13.0"
   }
 }
